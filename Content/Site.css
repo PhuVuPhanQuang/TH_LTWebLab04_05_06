@@ -3,41 +3,7 @@
     padding-bottom: 20px;
 }
 
-.course {
-    list-style:none;
-}
 
-.course > li {
-    position:relative;
-    margin-bottom: 30px;
-}
-
-.course > li .date {
-    text-align: center;
-    background-color: #d41d50;
-    color: white;
-    width:60px;
-    border-radius:8px;
-}
-
-.course > li .details {
-    position:absolute;
-    top:0;
-    left:70px;
-}
-
-.navbar-inverse {
-    background-color: #d41d50;
-    border-color: #ffffff;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-    color: #ffffff;
-}
-
-.navbar-inverse .navbar-brand {
-    color: #ffffff;
-}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -53,11 +19,56 @@
     white-space: normal;
 }
 
+.navbar-inverse {
+    background-color: blue;
+    border-color: beige;
+}
+
+.navbar-fixed-top {
+    top: 0;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.course {
+    list-style: none;
+}
+
+.course > li {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.course > li .date {
+      text-align: center;
+      background-color: red;
+      color: white;
+      width: 60px;
+      border-radius: 8px;
+}
+
+.course > li .details {
+   position: absolute;
+    top: 0;
+    left: 70px;
+}
+
+.course > li .action {
+    display: none;
+    left: 70px;
+    position: absolute;
+}
+
+.course > li:hover .action {
+    display: block;
+}
+
+   
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
 }
-
-

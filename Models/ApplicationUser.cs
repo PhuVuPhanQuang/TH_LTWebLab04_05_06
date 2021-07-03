@@ -15,6 +15,7 @@ namespace TH_LTWebLab04_05_06.Models
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
+
         public ICollection<Following> Followers { get; set; }
         public ICollection<Following> Followees { get; set; }
 

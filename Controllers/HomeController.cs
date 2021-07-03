@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using TH_LTWebLab04_05_06.Models;
 using System.Data.Entity;
-
+using TH_LTWebLab04_05_06.Models;
+using TH_LTWebLab04_05_06.ViewModels;
 
 namespace TH_LTWebLab04_05_06.Controllers
 {
@@ -18,11 +16,18 @@ namespace TH_LTWebLab04_05_06.Controllers
         }
         public ActionResult Index()
         {
-            var uncomingCourses = _dbContext.Courses
+            var upcommingCourses = _dbContext.Courses
                 .Include(a => a.Lecturer)
                 .Include(d => d.Category)
                 .Where(c => c.DateTime > DateTime.Now);
-            return View(uncomingCourses);
+
+            var viewModel = new CoursesViewModel
+            {
+                UpcommingCourses = upcommingCourses,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult About()

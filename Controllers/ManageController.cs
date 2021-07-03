@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using TH_LTWebLab04_05_06.Models;
+using TH_LTWebLab04_05_06.ViewModels;
 
 namespace TH_LTWebLab04_05_06.Controllers
 {

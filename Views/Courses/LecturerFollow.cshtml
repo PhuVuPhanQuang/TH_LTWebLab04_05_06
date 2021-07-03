@@ -15,22 +15,22 @@
                     @course.DateTime.ToString("dd")
                 </div>
             </div>
-            <div class="details">                           
-                    <span class="lecturer">
+            <div class="details">
+                <span class="lecturer">
                     @course.Lecturer.Name
                     @if (Model.ShowAction)
                     {
                         <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Follow</button>
                     }
-                    </span>                       
-                    <br />
-                    <span class="category">
-                        @course.Category.Name
-                        @if (Model.ShowAction)
-                        {
-                            <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
-                        }
-                    </span>                       
+                </span>
+                <br />
+                <span class="category">
+                    @course.Category.Name
+                    @if (Model.ShowAction)
+                    {
+                        <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
+                    }
+                </span>
             </div>
         </li>
     }

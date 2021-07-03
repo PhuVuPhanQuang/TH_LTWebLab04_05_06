@@ -5,19 +5,19 @@ using System.Globalization;
 using System.Linq;
 using System.Web;
 
-namespace TH_LTWebLab04_05_06.Models
+namespace TH_LTWebLab04_05_06.ViewModels
 {
-    public class ValidTime : ValidationAttribute
+    public class FutureDate : ValidationAttribute
     {
         public override bool IsValid(Object value)
         {
             DateTime dateTime;
-            var isValid = DateTime.TryParseExact(Convert.ToString(value), "HH:mm",
+            var isValid = DateTime.TryParseExact(Convert.ToString(value),"M/dd/yyyy",
                 CultureInfo.CurrentCulture,
                 DateTimeStyles.None,
                 out dateTime);
 
-            return isValid;
+                return (isValid && dateTime > DateTime.Now);
         }
     }
 }

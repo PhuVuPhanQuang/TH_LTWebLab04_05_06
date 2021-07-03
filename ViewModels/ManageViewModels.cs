@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace TH_LTWebLab04_05_06.Models
+namespace TH_LTWebLab04_05_06.ViewModels
 {
     public class IndexViewModel
     {
