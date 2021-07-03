@@ -11,7 +11,6 @@ namespace TH_LTWebLab04_05_06
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            //test
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
