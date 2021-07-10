@@ -20,8 +20,8 @@
 }
 
 .navbar-inverse {
-    background-color: blue;
-    border-color: beige;
+    background-color: #d41d50;
+    border-color: white;
 }
 
 .navbar-fixed-top {
@@ -43,7 +43,7 @@
 
 .course > li .date {
       text-align: center;
-      background-color: red;
+      background-color: #d41d50;
       color: white;
       width: 60px;
       border-radius: 8px;

@@ -30,9 +30,7 @@ namespace TH_LTWebLab04_05_06.Controllers
             var folowing = new Following
             {
                 FolloweeId = userId,
-                FollowerId = followingdto.FolloweeId,
-                // Followee = _dbContext.Users.First(p => p.Id == followingdto.FolloweeId),
-                //Follower = _dbContext.Users.First(p => p.Id == userId)
+                FollowerId = followingdto.FolloweeId
             };
             _dbContext.Followings.Add(folowing);
             _dbContext.SaveChanges();
