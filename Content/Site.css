@@ -32,6 +32,10 @@
     color: white;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
 .course {
     list-style: none;
 }

@@ -77,6 +77,20 @@ namespace TH_LTWebLab04_05_06.Controllers
             return View("Attending", viewModel);
         }
 
+        [Authorize]
+        public ActionResult Following()
+        {
+            var userId = User.Identity.GetUserId();
+
+            List<Following> dsFollow = _dbContext.Followings
+                .Where(a => a.FollowerId == userId)
+                .Include(a => a.Followee)
+                .ToList();
+
+
+            return View("Following",dsFollow);
+        }
+
 
         [Authorize]
         public ActionResult Mine()

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<TH_LTWebLab04_05_06.Models.Following>
+@{
+    ViewBag.Title = "Following";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> Following</h2>
+
+@foreach (var following in Model)
+{
+    <div class="details">
+        <span class="badge">
+            @following.Followee.Name 
+          <button class="btn btn-default js-toggle-unfollow" data-user-id="@following.FolloweeId">UnFollow</button>
+
+        </span>      
+    </div>
+}
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $(".js-toggle-unfollow").click(function (e) {
+                var button = $(e.target);
+                $.post("/api/UnFollowLec", { followeeId: button.attr("data-user-id") })
+                    .done(function () {
+                        window.location.reload();
+                    })
+                    .fail(function () {
+                        alert("Something fail!");
+                    })
+            })
+        })
+    </script>
+}
